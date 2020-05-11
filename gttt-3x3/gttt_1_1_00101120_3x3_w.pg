@@ -1,0 +1,32 @@
+%%  size:3x3 GTTT(1,1) torus:false shape:Knobby swap:true sym:true
+%
+%    X 
+%    XX
+%    X 
+%    
+#blackturns
+t2 t4 t6 t8 
+#times
+t1 t2 t3 t4 t5 t6 t7 t8 t9 
+#positions
+a1 a2 a3 b1 b2 b3 c1 c2 c3 
+#whitewins
+a1 b1 c1 b2 
+a1 a2 a3 b2 
+a2 b2 c2 b1 
+b1 b2 b3 a2 
+a2 b2 c2 b3 
+a3 b3 c3 b2 
+b1 b2 b3 c2 
+c1 c2 c3 b2 
+#blackwins
+a1 b1 c1 b2 
+a1 a2 a3 b2 
+a2 b2 c2 b1 
+b1 b2 b3 a2 
+a2 b2 c2 b3 
+a3 b3 c3 b2 
+b1 b2 b3 c2 
+c1 c2 c3 b2 
+#firstmoves
+a1 a2 b2 

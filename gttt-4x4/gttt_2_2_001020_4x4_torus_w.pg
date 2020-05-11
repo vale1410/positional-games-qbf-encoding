@@ -1,0 +1,80 @@
+%%  size:4x4 GTTT(2,2) torus:true shape:Tic swap:true sym:true
+%
+%    X
+%    X
+%    X
+%    
+#blackturns
+t3 t4 t7 t8 t11 t12 t15 t16 
+#times
+t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12 t13 t14 t15 t16 
+#positions
+a1 a2 a3 a4 b1 b2 b3 b4 c1 c2 c3 c4 d1 d2 d3 d4 
+#whitewins
+a1 b1 c1 
+a1 a2 a3 
+a2 b2 c2 
+a2 a3 a4 
+a3 b3 c3 
+a3 a4 a1 
+a4 b4 c4 
+a4 a1 a2 
+b1 c1 d1 
+b1 b2 b3 
+b2 c2 d2 
+b2 b3 b4 
+b3 c3 d3 
+b3 b4 b1 
+b4 c4 d4 
+b4 b1 b2 
+c1 d1 a1 
+c1 c2 c3 
+c2 d2 a2 
+c2 c3 c4 
+c3 d3 a3 
+c3 c4 c1 
+c4 d4 a4 
+c4 c1 c2 
+d1 a1 b1 
+d1 d2 d3 
+d2 a2 b2 
+d2 d3 d4 
+d3 a3 b3 
+d3 d4 d1 
+d4 a4 b4 
+d4 d1 d2 
+#blackwins
+a1 b1 c1 
+a1 a2 a3 
+a2 b2 c2 
+a2 a3 a4 
+a3 b3 c3 
+a3 a4 a1 
+a4 b4 c4 
+a4 a1 a2 
+b1 c1 d1 
+b1 b2 b3 
+b2 c2 d2 
+b2 b3 b4 
+b3 c3 d3 
+b3 b4 b1 
+b4 c4 d4 
+b4 b1 b2 
+c1 d1 a1 
+c1 c2 c3 
+c2 d2 a2 
+c2 c3 c4 
+c3 d3 a3 
+c3 c4 c1 
+c4 d4 a4 
+c4 c1 c2 
+d1 a1 b1 
+d1 d2 d3 
+d2 a2 b2 
+d2 d3 d4 
+d3 a3 b3 
+d3 d4 d1 
+d4 a4 b4 
+d4 d1 d2 
+#firstmoves
+a1

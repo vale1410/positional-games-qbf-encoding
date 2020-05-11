@@ -1,0 +1,52 @@
+%
+
+%             O          
+%          -     -       
+%       -     -     -    
+%    -     -     -     X 
+%       -     -     -    
+%          X     O       
+%             -          
+%
+#blackinitials
+c1
+d4
+#whiteinitials
+a4
+d2
+#times
+t1 t2 t3 t4 t5 t6 t7 
+#blackturns
+t1 t3 t5 t7 
+#positions
+a1 a2 a3 a4 b1 b2 b3 b4 c1 c2 c3 c4 d1 d2 d3 d4 
+#blackwins
+a1 a2 a3 b3 b4 
+a1 a2 a3 b3 c3 c4 
+a1 a2 a3 b3 c3 d3 d4 
+a1 a2 b2 b3 b4 
+a1 a2 b2 b3 c3 c4 
+a1 a2 b2 b3 c3 d3 d4 
+a1 a2 b2 c2 c3 b4 
+a1 a2 b2 c2 c3 c4 
+a1 a2 b2 c2 c3 d3 d4 
+b1 a2 a3 b3 b4 
+b1 a2 a3 b3 c3 c4 
+b1 a2 a3 b3 c3 d3 d4 
+b1 b2 b3 b4 
+b1 b2 b3 c3 c4 
+b1 b2 b3 c3 d3 d4 
+b1 b2 c2 c3 b4 
+b1 b2 c2 c3 c4 
+b1 b2 c2 c3 d3 d4 
+c1 b2 b3 b4 
+c1 b2 b3 c3 c4 
+c1 b2 b3 c3 d3 d4 
+c1 c2 b3 b4 
+c1 c2 c3 b4 
+c1 c2 c3 c4 
+c1 c2 c3 d3 d4 
+d1 c2 b3 b4 
+d1 c2 c3 b4 
+d1 c2 c3 c4 
+d1 c2 c3 d3 d4 

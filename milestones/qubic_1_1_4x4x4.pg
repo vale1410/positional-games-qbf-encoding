@@ -1,0 +1,178 @@
+#times
+t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12 t13 t14 t15 t16 t17 t18 t19 t20 t21 t22 t23 t24 t25 t26 t27 t28 t29 t30 t31 t32 t33 t34 t35 t36 t37 t38 t39 t40 t41 t42 t43 t44 t45 t46 t47 t48 t49 t50 t51 t52 t53 t54 t55 t56 t57 t58 t59 t60 t61 t62 t63 t64 
+#blackturns
+t1 t3 t5 t7 t9 t11 t13 t15 t17 t19 t21 t23 t25 t27 t29 t31 t33 t35 t37 t39 t41 t43 t45 t47 t49 t51 t53 t55 t57 t59 t61 t63 
+#positions
+a1x a1y a1z a1w a2x a2y a2z a2w a3x a3y a3z a3w a4x a4y a4z a4w b1x b1y b1z b1w b2x b2y b2z b2w b3x b3y b3z b3w b4x b4y b4z b4w c1x c1y c1z c1w c2x c2y c2z c2w c3x c3y c3z c3w c4x c4y c4z c4w d1x d1y d1z d1w d2x d2y d2z d2w d3x d3y d3z d3w d4x d4y d4z d4w 
+#blackwins
+% STRAIGHT LINES
+% vary on 3rd dimension
+a1x a1y a1z a1w 
+a2x a2y a2z a2w 
+a3x a3y a3z a3w 
+a4x a4y a4z a4w 
+b1x b1y b1z b1w 
+b2x b2y b2z b2w 
+b3x b3y b3z b3w 
+b4x b4y b4z b4w 
+c1x c1y c1z c1w 
+c2x c2y c2z c2w 
+c3x c3y c3z c3w 
+c4x c4y c4z c4w 
+d1x d1y d1z d1w 
+d2x d2y d2z d2w 
+d3x d3y d3z d3w 
+d4x d4y d4z d4w 
+% vary on 2rd dimension
+a1x a2x a3x a4x 
+a1y a2y a3y a4y 
+a1z a2z a3z a4z 
+a1w a2w a3w a4w 
+b1x b2x b3x b4x 
+b1y b2y b3y b4y 
+b1z b2z b3z b4z 
+b1w b2w b3w b4w 
+c1x c2x c3x c4x 
+c1y c2y c3y c4y 
+c1z c2z c3z c4z 
+c1w c2w c3w c4w 
+d1x d2x d3x d4x 
+d1y d2y d3y d4y 
+d1z d2z d3z d4z 
+d1w d2w d3w d4w 
+% vary on 1rd dimension
+a1x b1x c1x d1x 
+a1y b1y c1y d1y 
+a1z b1z c1z d1z 
+a1w b1w c1w d1w 
+a2x b2x c2x d2x 
+a2y b2y c2y d2y 
+a2z b2z c2z d2z 
+a2w b2w c2w d2w 
+a3x b3x c3x d3x 
+a3y b3y c3y d3y 
+a3z b3z c3z d3z 
+a3w b3w c3w d3w 
+a4x b4x c4x d4x 
+a4y b4y c4y d4y 
+a4z b4z c4z d4z 
+a4w b4w c4w d4w 
+% DIAGONAL LINES in 2 Dimensions
+% vary on 1rd and 2nd dimension
+a1x b2x c3x d4x 
+a4x b3x c2x d1x 
+a1y b2y c3y d4y 
+a4y b3y c2y d1y 
+a1z b2z c3z d4z 
+a4z b3z c2z d1z 
+a1w b2w c3w d4w 
+a4w b3w c2w d1w 
+% vary on 2rd and 3nd dimension
+a1x a2y a3z a4w 
+a1w a2z a3y a4x 
+b1x b2y b3z b4w 
+b1w b2z b3y b4x 
+c1x c2y c3z c4w 
+c1w c2z c3y c4x 
+d1x d2y d3z d4w 
+d1w d2z d3y d4x 
+% vary on 1rd and 3nd dimension
+a1x b1y c1z d1w 
+d1x c1y b1z a1w 
+a2x b2y c2z d2w 
+d2x c2y b2z a2w 
+a3x b3y c3z d3w 
+d3x c3y b3z a3w 
+a4x b4y c4z d4w 
+d4x c4y b4z a4w 
+% DIAGONAL LINES in 3 Dimensions
+a1x b2y c3z d4w 
+a4w b3z c2y d1x 
+a4x b3y c2z d1w 
+a1w b2z c3y d4x 
+#whitewins
+% STRAIGHT LINES
+% vary on 3rd dimension
+a1x a1y a1z a1w 
+a2x a2y a2z a2w 
+a3x a3y a3z a3w 
+a4x a4y a4z a4w 
+b1x b1y b1z b1w 
+b2x b2y b2z b2w 
+b3x b3y b3z b3w 
+b4x b4y b4z b4w 
+c1x c1y c1z c1w 
+c2x c2y c2z c2w 
+c3x c3y c3z c3w 
+c4x c4y c4z c4w 
+d1x d1y d1z d1w 
+d2x d2y d2z d2w 
+d3x d3y d3z d3w 
+d4x d4y d4z d4w 
+% vary on 2rd dimension
+a1x a2x a3x a4x 
+a1y a2y a3y a4y 
+a1z a2z a3z a4z 
+a1w a2w a3w a4w 
+b1x b2x b3x b4x 
+b1y b2y b3y b4y 
+b1z b2z b3z b4z 
+b1w b2w b3w b4w 
+c1x c2x c3x c4x 
+c1y c2y c3y c4y 
+c1z c2z c3z c4z 
+c1w c2w c3w c4w 
+d1x d2x d3x d4x 
+d1y d2y d3y d4y 
+d1z d2z d3z d4z 
+d1w d2w d3w d4w 
+% vary on 1rd dimension
+a1x b1x c1x d1x 
+a1y b1y c1y d1y 
+a1z b1z c1z d1z 
+a1w b1w c1w d1w 
+a2x b2x c2x d2x 
+a2y b2y c2y d2y 
+a2z b2z c2z d2z 
+a2w b2w c2w d2w 
+a3x b3x c3x d3x 
+a3y b3y c3y d3y 
+a3z b3z c3z d3z 
+a3w b3w c3w d3w 
+a4x b4x c4x d4x 
+a4y b4y c4y d4y 
+a4z b4z c4z d4z 
+a4w b4w c4w d4w 
+% DIAGONAL LINES in 2 Dimensions
+% vary on 1rd and 2nd dimension
+a1x b2x c3x d4x 
+a4x b3x c2x d1x 
+a1y b2y c3y d4y 
+a4y b3y c2y d1y 
+a1z b2z c3z d4z 
+a4z b3z c2z d1z 
+a1w b2w c3w d4w 
+a4w b3w c2w d1w 
+% vary on 2rd and 3nd dimension
+a1x a2y a3z a4w 
+a1w a2z a3y a4x 
+b1x b2y b3z b4w 
+b1w b2z b3y b4x 
+c1x c2y c3z c4w 
+c1w c2z c3y c4x 
+d1x d2y d3z d4w 
+d1w d2z d3y d4x 
+% vary on 1rd and 3nd dimension
+a1x b1y c1z d1w 
+d1x c1y b1z a1w 
+a2x b2y c2z d2w 
+d2x c2y b2z a2w 
+a3x b3y c3z d3w 
+d3x c3y b3z a3w 
+a4x b4y c4z d4w 
+d4x c4y b4z a4w 
+% DIAGONAL LINES in 3 Dimensions
+a1x b2y c3z d4w 
+a4w b3z c2y d1x 
+a4x b3y c2z d1w 
+a1w b2z c3y d4x 

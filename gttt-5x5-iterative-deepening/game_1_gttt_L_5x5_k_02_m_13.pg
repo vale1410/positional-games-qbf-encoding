@@ -1,0 +1,147 @@
+#blackinitials
+b2
+#whiteinitials
+a1
+#times
+t3 t4 t5 t6 t7 t8 t9 t10 t11 t12 t13 t14 t15 
+#blackturns
+t3 t5 t7 t9 t11 t13 t15 
+%%  size:5x5 GTTT(1,1) torus:false shape:L swap:false sym:true
+%
+%    XX
+%    X 
+%    X 
+%    X 
+%    
+#positions
+a1 a2 a3 a4 a5 b1 b2 b3 b4 b5 c1 c2 c3 c4 c5 d1 d2 d3 d4 d5 e1 e2 e3 e4 e5 
+#blackwins
+a2 a1 b1 c1 d1 
+a1 a2 a3 a4 b4 
+a2 b2 c2 d2 d1 
+a1 b1 b2 b3 b4 
+a4 a3 a2 a1 b1 
+a1 a2 b2 c2 d2 
+a4 b4 b3 b2 b1 
+a1 b1 c1 d1 d2 
+a3 a2 b2 c2 d2 
+a2 a3 a4 a5 b5 
+a3 b3 c3 d3 d2 
+a2 b2 b3 b4 b5 
+a5 a4 a3 a2 b2 
+a2 a3 b3 c3 d3 
+a5 b5 b4 b3 b2 
+a2 b2 c2 d2 d3 
+a4 a3 b3 c3 d3 
+a4 b4 c4 d4 d3 
+a3 a4 b4 c4 d4 
+a3 b3 c3 d3 d4 
+a5 a4 b4 c4 d4 
+a5 b5 c5 d5 d4 
+a4 a5 b5 c5 d5 
+a4 b4 c4 d4 d5 
+b2 b1 c1 d1 e1 
+b1 b2 b3 b4 c4 
+b2 c2 d2 e2 e1 
+b1 c1 c2 c3 c4 
+b4 b3 b2 b1 c1 
+b1 b2 c2 d2 e2 
+b4 c4 c3 c2 c1 
+b1 c1 d1 e1 e2 
+b3 b2 c2 d2 e2 
+b2 b3 b4 b5 c5 
+b3 c3 d3 e3 e2 
+b2 c2 c3 c4 c5 
+b5 b4 b3 b2 c2 
+b2 b3 c3 d3 e3 
+b5 c5 c4 c3 c2 
+b2 c2 d2 e2 e3 
+b4 b3 c3 d3 e3 
+b4 c4 d4 e4 e3 
+b3 b4 c4 d4 e4 
+b3 c3 d3 e3 e4 
+b5 b4 c4 d4 e4 
+b5 c5 d5 e5 e4 
+b4 b5 c5 d5 e5 
+b4 c4 d4 e4 e5 
+c1 c2 c3 c4 d4 
+c1 d1 d2 d3 d4 
+c4 c3 c2 c1 d1 
+c4 d4 d3 d2 d1 
+c2 c3 c4 c5 d5 
+c2 d2 d3 d4 d5 
+c5 c4 c3 c2 d2 
+c5 d5 d4 d3 d2 
+d1 d2 d3 d4 e4 
+d1 e1 e2 e3 e4 
+d4 d3 d2 d1 e1 
+d4 e4 e3 e2 e1 
+d2 d3 d4 d5 e5 
+d2 e2 e3 e4 e5 
+d5 d4 d3 d2 e2 
+d5 e5 e4 e3 e2 
+#whitewins
+a2 a1 b1 c1 d1 
+a1 a2 a3 a4 b4 
+a2 b2 c2 d2 d1 
+a1 b1 b2 b3 b4 
+a4 a3 a2 a1 b1 
+a1 a2 b2 c2 d2 
+a4 b4 b3 b2 b1 
+a1 b1 c1 d1 d2 
+a3 a2 b2 c2 d2 
+a2 a3 a4 a5 b5 
+a3 b3 c3 d3 d2 
+a2 b2 b3 b4 b5 
+a5 a4 a3 a2 b2 
+a2 a3 b3 c3 d3 
+a5 b5 b4 b3 b2 
+a2 b2 c2 d2 d3 
+a4 a3 b3 c3 d3 
+a4 b4 c4 d4 d3 
+a3 a4 b4 c4 d4 
+a3 b3 c3 d3 d4 
+a5 a4 b4 c4 d4 
+a5 b5 c5 d5 d4 
+a4 a5 b5 c5 d5 
+a4 b4 c4 d4 d5 
+b2 b1 c1 d1 e1 
+b1 b2 b3 b4 c4 
+b2 c2 d2 e2 e1 
+b1 c1 c2 c3 c4 
+b4 b3 b2 b1 c1 
+b1 b2 c2 d2 e2 
+b4 c4 c3 c2 c1 
+b1 c1 d1 e1 e2 
+b3 b2 c2 d2 e2 
+b2 b3 b4 b5 c5 
+b3 c3 d3 e3 e2 
+b2 c2 c3 c4 c5 
+b5 b4 b3 b2 c2 
+b2 b3 c3 d3 e3 
+b5 c5 c4 c3 c2 
+b2 c2 d2 e2 e3 
+b4 b3 c3 d3 e3 
+b4 c4 d4 e4 e3 
+b3 b4 c4 d4 e4 
+b3 c3 d3 e3 e4 
+b5 b4 c4 d4 e4 
+b5 c5 d5 e5 e4 
+b4 b5 c5 d5 e5 
+b4 c4 d4 e4 e5 
+c1 c2 c3 c4 d4 
+c1 d1 d2 d3 d4 
+c4 c3 c2 c1 d1 
+c4 d4 d3 d2 d1 
+c2 c3 c4 c5 d5 
+c2 d2 d3 d4 d5 
+c5 c4 c3 c2 d2 
+c5 d5 d4 d3 d2 
+d1 d2 d3 d4 e4 
+d1 e1 e2 e3 e4 
+d4 d3 d2 d1 e1 
+d4 e4 e3 e2 e1 
+d2 d3 d4 d5 e5 
+d2 e2 e3 e4 e5 
+d5 d4 d3 d2 e2 
+d5 e5 e4 e3 e2 

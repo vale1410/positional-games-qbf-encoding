@@ -1,0 +1,142 @@
+%
+
+%                -             
+%             X     -          
+%          -     -     -       
+%       -     -     O     X    
+%    X     -     X     -     - 
+%       -     O     -     -    
+%          -     -     -       
+%             -     -          
+%                O             
+%
+#blackinitials
+a1
+a4
+c3
+d5
+#whiteinitials
+c2
+c4
+e1
+#times
+t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12 t13 t14 t15 
+#blackturns
+t1 t3 t5 t7 t9 t11 t13 t15 
+#positions
+a1 a2 a3 a4 a5 b1 b2 b3 b4 b5 c1 c2 c3 c4 c5 d1 d2 d3 d4 d5 e1 e2 e3 e4 e5 
+#blackwins
+a1 a2 a3 a4 a5 
+a1 a2 a3 a4 b4 b5 
+a1 a2 a3 a4 b4 c3 d2 e2 e3 d4 c5 
+a1 a2 a3 a4 b4 c3 d2 e2 e3 d4 d5 
+a1 a2 a3 a4 b4 c3 d2 e2 e3 e4 d5 
+a1 a2 a3 a4 b4 c3 d2 e2 e3 e4 e5 
+a1 a2 a3 a4 b4 c3 d3 d4 c5 
+a1 a2 a3 a4 b4 c3 d3 d4 d5 
+a1 a2 a3 a4 b4 c3 d3 d4 e4 e5 
+a1 a2 a3 a4 b4 c3 d3 e3 e4 d5 
+a1 a2 a3 a4 b4 c3 d3 e3 e4 e5 
+a1 a2 a3 b3 b4 a5 
+a1 a2 a3 b3 b4 b5 
+a1 a2 a3 b3 c3 d2 e2 e3 d4 c5 
+a1 a2 a3 b3 c3 d2 e2 e3 d4 d5 
+a1 a2 a3 b3 c3 d2 e2 e3 e4 d5 
+a1 a2 a3 b3 c3 d2 e2 e3 e4 e5 
+a1 a2 a3 b3 c3 d3 d4 c5 
+a1 a2 a3 b3 c3 d3 d4 d5 
+a1 a2 a3 b3 c3 d3 d4 e4 e5 
+a1 a2 a3 b3 c3 d3 e3 e4 d5 
+a1 a2 a3 b3 c3 d3 e3 e4 e5 
+a1 a2 b2 b3 a4 a5 
+a1 a2 b2 b3 b4 a5 
+a1 a2 b2 b3 b4 b5 
+a1 a2 b2 b3 c3 d2 e2 e3 d4 c5 
+a1 a2 b2 b3 c3 d2 e2 e3 d4 d5 
+a1 a2 b2 b3 c3 d2 e2 e3 e4 d5 
+a1 a2 b2 b3 c3 d2 e2 e3 e4 e5 
+a1 a2 b2 b3 c3 d3 d4 c5 
+a1 a2 b2 b3 c3 d3 d4 d5 
+a1 a2 b2 b3 c3 d3 d4 e4 e5 
+a1 a2 b2 b3 c3 d3 e3 e4 d5 
+a1 a2 b2 b3 c3 d3 e3 e4 e5 
+b1 a2 a3 a4 a5 
+b1 a2 a3 a4 b4 b5 
+b1 a2 a3 a4 b4 c3 d2 e2 e3 d4 c5 
+b1 a2 a3 a4 b4 c3 d2 e2 e3 d4 d5 
+b1 a2 a3 a4 b4 c3 d2 e2 e3 e4 d5 
+b1 a2 a3 a4 b4 c3 d2 e2 e3 e4 e5 
+b1 a2 a3 a4 b4 c3 d3 d4 c5 
+b1 a2 a3 a4 b4 c3 d3 d4 d5 
+b1 a2 a3 a4 b4 c3 d3 d4 e4 e5 
+b1 a2 a3 a4 b4 c3 d3 e3 e4 d5 
+b1 a2 a3 a4 b4 c3 d3 e3 e4 e5 
+b1 a2 a3 b3 b4 a5 
+b1 a2 a3 b3 b4 b5 
+b1 a2 a3 b3 c3 d2 e2 e3 d4 c5 
+b1 a2 a3 b3 c3 d2 e2 e3 d4 d5 
+b1 a2 a3 b3 c3 d2 e2 e3 e4 d5 
+b1 a2 a3 b3 c3 d2 e2 e3 e4 e5 
+b1 a2 a3 b3 c3 d3 d4 c5 
+b1 a2 a3 b3 c3 d3 d4 d5 
+b1 a2 a3 b3 c3 d3 d4 e4 e5 
+b1 a2 a3 b3 c3 d3 e3 e4 d5 
+b1 a2 a3 b3 c3 d3 e3 e4 e5 
+b1 b2 a3 a4 a5 
+b1 b2 a3 a4 b4 b5 
+b1 b2 a3 a4 b4 c3 d2 e2 e3 d4 c5 
+b1 b2 a3 a4 b4 c3 d2 e2 e3 d4 d5 
+b1 b2 a3 a4 b4 c3 d2 e2 e3 e4 d5 
+b1 b2 a3 a4 b4 c3 d2 e2 e3 e4 e5 
+b1 b2 a3 a4 b4 c3 d3 d4 c5 
+b1 b2 a3 a4 b4 c3 d3 d4 d5 
+b1 b2 a3 a4 b4 c3 d3 d4 e4 e5 
+b1 b2 a3 a4 b4 c3 d3 e3 e4 d5 
+b1 b2 a3 a4 b4 c3 d3 e3 e4 e5 
+b1 b2 b3 a4 a5 
+b1 b2 b3 b4 a5 
+b1 b2 b3 b4 b5 
+b1 b2 b3 c3 d2 e2 e3 d4 c5 
+b1 b2 b3 c3 d2 e2 e3 d4 d5 
+b1 b2 b3 c3 d2 e2 e3 e4 d5 
+b1 b2 b3 c3 d2 e2 e3 e4 e5 
+b1 b2 b3 c3 d3 d4 c5 
+b1 b2 b3 c3 d3 d4 d5 
+b1 b2 b3 c3 d3 d4 e4 e5 
+b1 b2 b3 c3 d3 e3 e4 d5 
+b1 b2 b3 c3 d3 e3 e4 e5 
+c1 b2 a3 a4 a5 
+c1 b2 a3 a4 b4 b5 
+c1 b2 a3 a4 b4 c3 d2 e2 e3 d4 c5 
+c1 b2 a3 a4 b4 c3 d2 e2 e3 d4 d5 
+c1 b2 a3 a4 b4 c3 d2 e2 e3 e4 d5 
+c1 b2 a3 a4 b4 c3 d2 e2 e3 e4 e5 
+c1 b2 a3 a4 b4 c3 d3 d4 c5 
+c1 b2 a3 a4 b4 c3 d3 d4 d5 
+c1 b2 a3 a4 b4 c3 d3 d4 e4 e5 
+c1 b2 a3 a4 b4 c3 d3 e3 e4 d5 
+c1 b2 a3 a4 b4 c3 d3 e3 e4 e5 
+c1 b2 b3 a4 a5 
+c1 b2 b3 b4 a5 
+c1 b2 b3 b4 b5 
+c1 b2 b3 c3 d2 e2 e3 d4 c5 
+c1 b2 b3 c3 d2 e2 e3 d4 d5 
+c1 b2 b3 c3 d2 e2 e3 e4 d5 
+c1 b2 b3 c3 d2 e2 e3 e4 e5 
+c1 b2 b3 c3 d3 d4 c5 
+c1 b2 b3 c3 d3 d4 d5 
+c1 b2 b3 c3 d3 d4 e4 e5 
+c1 b2 b3 c3 d3 e3 e4 d5 
+c1 b2 b3 c3 d3 e3 e4 e5 
+d1 d2 c3 b3 a4 a5 
+d1 d2 c3 b4 a5 
+d1 d2 c3 b4 b5 
+d1 d2 d3 d4 c5 
+d1 d2 d3 d4 d5 
+d1 d2 d3 d4 e4 e5 
+d1 d2 d3 e3 e4 d5 
+d1 d2 d3 e3 e4 e5 
+d1 d2 e2 e3 d4 c5 
+d1 d2 e2 e3 d4 d5 
+d1 d2 e2 e3 e4 d5 
+d1 d2 e2 e3 e4 e5 

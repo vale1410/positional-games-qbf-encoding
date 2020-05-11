@@ -1,0 +1,48 @@
+%%  size:3x3 GTTT(2,1) torus:false shape:Elly swap:false sym:true
+%
+%    XX
+%    X 
+%    X 
+%    
+#blackturns
+t1 t4 t5 t8 t9 
+#times
+t1 t2 t3 t4 t5 t6 t7 t8 t9 
+#positions
+a1 a2 a3 b1 b2 b3 c1 c2 c3 
+#blackwins
+a2 a1 b1 c1 
+a1 a2 a3 b3 
+a2 b2 c2 c1 
+a1 b1 b2 b3 
+a3 a2 a1 b1 
+a1 a2 b2 c2 
+a3 b3 b2 b1 
+a1 b1 c1 c2 
+a3 a2 b2 c2 
+a3 b3 c3 c2 
+a2 a3 b3 c3 
+a2 b2 c2 c3 
+b1 b2 b3 c3 
+b1 c1 c2 c3 
+b3 b2 b1 c1 
+b3 c3 c2 c1 
+#whitewins
+a2 a1 b1 c1 
+a1 a2 a3 b3 
+a2 b2 c2 c1 
+a1 b1 b2 b3 
+a3 a2 a1 b1 
+a1 a2 b2 c2 
+a3 b3 b2 b1 
+a1 b1 c1 c2 
+a3 a2 b2 c2 
+a3 b3 c3 c2 
+a2 a3 b3 c3 
+a2 b2 c2 c3 
+b1 b2 b3 c3 
+b1 c1 c2 c3 
+b3 b2 b1 c1 
+b3 c3 c2 c1 
+#firstmoves
+a1 a2 b2 

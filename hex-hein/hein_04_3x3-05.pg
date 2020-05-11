@@ -1,0 +1,24 @@
+%
+
+%          -       
+%       -     -    
+%    X     -     - 
+%       O     O    
+%          -       
+%
+#blackinitials
+a1
+#whiteinitials
+b1
+c2
+#times
+t1 t2 t3 t4 t5 
+#blackturns
+t1 t3 t5 
+#positions
+a1 a2 a3 b1 b2 b3 c1 c2 c3 
+#blackwins
+a1 a2 a3 
+a1 a2 b2 b3 
+c1 b2 a3 
+c1 b2 b3 
