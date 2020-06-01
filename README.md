@@ -24,12 +24,17 @@ The general encoder reads a game description and produces a QDIMACS file that ca
 A line in the file is either a codeword that starts with #, a list of vertices or time points separated by white space. A vertex and time points must be alphanumeric strings. After each code word 
 the program expects one or more lines, each consisting of a list of vertices or time points separated by white space. The lines are read until the next code word or EOF (end of file).
 
-Code word | Game Specification | Comment ----------|---------------------|--------
-#times | T | List of time points in the order of the game.  blackturns | Tblack | List of time points in which black plays. (Whites time points T_\white = T\setminus T_\black) positions | V | The 
-#vertex set given as a list of vertices.  blackwins | Eblack | Each line consists of a list of vertices that define one winning configuration for black whitewins | Ewhite | Analog to #blackwins 
-#blackinitials | - . List of vertices that black owns before the game starts whiteinitials | - | Analog to #blackinitials} firstmoves | - | List of vertices that can be chosen from in the first 
-#move. version | | Version number of the game description. Currently 1.0.
-```
+Code word | Game Specification | Comment 
+----------|---------------------|--------
+#times | T | List of time points in the order of the game.  
+#blackturns | T-black | List of time points in which black plays. (Whites time points Twhite = T\setminus Tblack) 
+#positions | V | The vertex set given as a list of vertices.  
+#blackwins | Eblack | Each line consists of a list of vertices that define one winning configuration for 
+#whitewins | Ewhite | Analog to #blackwins 
+#blackinitials | - | List of vertices that black owns before the game starts 
+#whiteinitials | - | Analog to #blackinitials
+#firstmoves | - | List of vertices that can be chosen from in the first move. 
+version | | Version number of the game description. Currently 1.0.
 
 ### Examples from the paper in Section 2.
 
@@ -51,6 +56,4 @@ a1 b1 c1 a2 b2 c2 a3 b3 c3 a1 a2 a3 b1 b2 b3 c1 c2 c3 a1 b2 c3 a3 b2 c1
 #whiteinitials
 a1 
 ```
-
-
 
