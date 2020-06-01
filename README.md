@@ -40,7 +40,11 @@ Code word | Game Specification | Comment
 #firstmoves | - | List of vertices that can be chosen from in the first move. 
 #version | | Version number of the game description. Currently 1.0.
 
-### Examples from the paper in Section 2.
+### Examples for game description language
+
+
+![Example from paper](https://github.com/vale1410/positional-games-qbf-encoding/blob/master/example.png)
+
 
 ```
 #version
