@@ -1,0 +1,53 @@
+%% can be compiled with Bule Version 2.11.0. https://github.com/vale1410/bule
+
+%% #const finalN. %% finalN depth
+%% #const vertexLast. %% number of vertices
+%% edge[A,E,V] Agent, EdgeId, Vertex
+%% turnN[T,A,N]. TimeId, Agent, Number of moves in that step
+
+%input edge[A,E,V]. Agent A\in{0,1} has winning hyperedge E with vertex V (going from 0 to lastVertex, including )
+player[white].
+player[black].
+opponent[black,white].
+opponent[white,black].
+edge[A,E,_] :: edgeId[A,E]. 
+edge[_,_,V] :: vertex[V]. 
+
+t[0]. %Before first term 
+turn1[T,_] :: t[T]. 
+
+%% Symmetry
+firstMove[V],         :: firstMoveTime[V,1].
+vertex[V], t[T], T>1  :: firstMoveTime[V,T].
+
+%vertices going from 0..v-1, such that the bit addressing works properly . 
+vertex[V], vertex[I], 2**I <= vertexLast :: choose[V,I,(V/(2**I))#mod2]. 
+choose[_,I,_] :: bit[I]. 
+
+#exists[T-1], t[T], T>0,                         :: time(T)?  %1
+#forall[T], turn1[T,white], bit[I]               :: moveL(I,T)? 
+#exists[T], turn1[T,black], bit[I]               :: moveB(I,T)? 
+#exists[T], vertex[V], t[T], player[A]           :: board(A,V,T)?
+#exists[final], edgeId[black,E]                 :: win(E)?  %2 
+
+%% Symmetry
+turn1[1,A]  :: board(A,V,1) : firstMoveTime[V,1].
+
+~time(T+1), time(T). %3
+~board(_,_,0). %4
+vertex[V], t[T] :: ~board(A,V,T):player[A]. %5
+~board(A,V,T), board(A,V,T+1). %6
+time(T), board(A,V,T-1), ~board(A,V,T). %7
+turn1[T,A], opponent[A,B] :: board(B,V,T-1), ~board(B,V,T). %16
+
+turn1[T,white], firstMoveTime[V,T] :: 
+    ~moveL(I,T):choose[V,I,1], moveL(I,T):choose[V,I,0], 
+    ~time(T), board(black,V,T-1), board(white,V,T). %14
+
+A==black,turn1[T,A], choose[V,I,0] :: board(A,V,T-1), ~board(A,V,T), ~moveB(I,T). 
+A==black,turn1[T,A], choose[V,I,1] :: board(A,V,T-1), ~board(A,V,T),  moveB(I,T). 
+
+win(E) : edgeId[black,E]. %17
+edge[black,E,V] :: ~win(E), board(black,V,final). %18
+edgeId[black,E] :: win(E), ~board(black,V,final):edge[black,E,V]. %20
+edgeId[white,E] :: ~board(white,V,final):edge[white,E,V]. %19

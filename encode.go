@@ -37,7 +37,8 @@ var swpFlag bool
 var insFlag bool
 
 func initLogic() {
-	flag.IntVarP(&encFlag, "enc", "1", 1, "0: set all deprecated flags on. 1: c16. 2. c10,c18,c19. 3. 4. 5. ")
+	var encFlagTmp string
+	flag.StringVarP(&encFlagTmp, "enc", "1", "1", "0: set all deprecated flags on. 1: c16. 2. c10,c18,c19. 3. 4. 5. ")
 	flag.BoolVarP(&c10Flag, "c10", "", false, "adds redundant clause extrcd inst	a c10.")
 	flag.BoolVarP(&c16Flag, "c16", "", false, "adds clause c16 (alternative c19).")
 	flag.BoolVarP(&c18Flag, "c18", "", false, "adds redundant clause c18.")
@@ -49,6 +50,7 @@ func initLogic() {
 	cntThresh = 6 // cnt Threshold
 
 	flag.Parse()
+	encFlag, _ = strconv.Atoi(strings.TrimPrefix(encFlagTmp, "0"))
 	False = "F"
 
 	switch encFlag {
@@ -63,10 +65,17 @@ func initLogic() {
 		cntFlag = true
 		stackFlag = true
 		moveFlag = false
-	case 5: // MM DUPER INCREMENTAL STRAIGHT
-	case 6: // MM DUPER INCREMENTAL LOGARITHMIC
+	//case 5: // SAT PAPER 2020
+	//case encFlag > 6: // BULE 6
+	//	case 7: // BULE 7
+	//	case 8: // BULE 8
+	//	case 9: // BULE 9
+	//	case 10: // BULE 10
+	//	case 11: // BULE 8
+	//	case 12: // BULE 9
+	//	case 13: // BULE 10
 	default:
-		panic("please choose encoding by --enc=<id>" + ". Chosen:" + fmt.Sprintf("%v", encFlag))
+		//  	panic("please choose encoding by --enc=<id>" + ". Chosen:" + fmt.Sprintf("%v", encFlag))
 	}
 }
 
@@ -97,12 +106,24 @@ func main() {
 		g.encodeMakerBreaker()
 	case 5:
 		g.encodeMakerMakerLogarithmic()
-	default:
-		g.encodeMakerMaker5()
-	case 6:
+	default: // BULE 6
 		g.generateBuleFacts()
-	case 7:
-		panic("please choose encoding by --enc=<id>")
+		//	case 7:
+		//		g.generateBuleFacts()
+		//	case 8:
+		//		g.generateBuleFacts()
+		//	case 9:
+		//		g.generateBuleFacts()
+		//	case 10:
+		//		g.generateBuleFacts()
+		//	case 11:
+		//		g.generateBuleFacts()
+		//	case 12:
+		//		g.generateBuleFacts()
+		//	case 13:
+		//		g.generateBuleFacts()
+		//	default:
+		//		panic("please choose encoding by --enc=<id>")
 	}
 }
 
@@ -1218,13 +1239,15 @@ func (g *game) encodeMakerMakerLogarithmic() {
 		cls.comment("18\t: ~count(P,0,1,T).")
 		cls.comment("19\t: ~count(P,|V|, N_t+1,T).")
 		cls.comment("20\t: ~time(T), count(P,|V|, N_t,T).")
-		for _, P := range players {
-			for _, T := range turn[P] {
-				V0 := positionsZero[0]
-				cls.add(count(P, V0, 0, T))
-				cls.add(neg(count(P, V0, 1, T)))
-				cls.add(neg(time(T)), count(P, positions[len(positions)-1], numbers[T], T))
-				cls.add(neg(count(P, positions[len(positions)-1], numbers[T]+1, T)))
+		if len(positions) > 0 {
+			for _, P := range players {
+				for _, T := range turn[P] {
+					V0 := positionsZero[0]
+					cls.add(count(P, V0, 0, T))
+					cls.add(neg(count(P, V0, 1, T)))
+					cls.add(neg(time(T)), count(P, positions[len(positions)-1], numbers[T], T))
+					cls.add(neg(count(P, positions[len(positions)-1], numbers[T]+1, T)))
+				}
 			}
 		}
 	}
@@ -1321,35 +1344,48 @@ func (g *game) generateBuleFacts() {
 	numbers := g.numbers
 
 	time1 := 0
-	for _, id := range times {
-		player := 0
+	timeN := 0
+	for i, id := range times {
+		timeN++
+		player := "white"
 		if _, ok := blackturns[id]; ok {
-			player = 1
+			player = "black"
 		}
-		//		fmt.Println("turnN[", i+1, ",", player, ",", numbers[id], "].")
+		fmt.Println("turnN[", i+1, ",", player, ",", numbers[id], "].")
 		for i := 0; i < numbers[id]; i++ {
 			time1++
 			fmt.Println("turn1[", time1, ",", player, "].")
 		}
 	}
 	fmt.Println("#const final=", time1, ".")
+	fmt.Println("#const finalN=", timeN, ".")
 
 	positions := createMap(g.positions)
 	fmt.Println("#const vertexLast=", len(g.positions)-1, ".")
 	{
-		player := 1
+		player := "black"
 		for i, edge := range g.blackwins {
 			for _, v := range edge {
-				fmt.Println("edge[", player, ",", i+1, ",", positions[v], "].")
+				fmt.Println("edge[", player, ",", i, ",", positions[v], "].")
 			}
 		}
 	}
 	{
-		player := 0
+		player := "white"
 		for i, edge := range g.whitewins {
 			for _, v := range edge {
-				fmt.Println("edge[", player, ",", i+1, ",", positions[v], "].")
+				fmt.Println("edge[", player, ",", i, ",", positions[v], "].")
 			}
+		}
+	}
+	if len(g.firstmoves) == 0 {
+		for _, v := range g.positions {
+			fmt.Println("firstMove[", positions[v], "].")
+		}
+	} else {
+		// If no symmetry breaking, then first move can be any
+		for _, v := range g.firstmoves {
+			fmt.Println("firstMove[", positions[v], "].")
 		}
 	}
 }
@@ -2109,7 +2145,7 @@ func parse() (game, error) {
 	var g game
 
 	if len(flag.Args()) == 0 {
-		return g, errors.New("usage: ./ground <filename>")
+		return g, errors.New("usage: ./encode <filename>")
 	}
 	file, err := os.Open(flag.Args()[0])
 	if err != nil {
@@ -2218,12 +2254,18 @@ func parse() (game, error) {
 		g.positions = remove(g.positions, g.whiteinitials)
 	}
 
+	//  remove times if not enough positions.
 	if len(g.positions) < len(g.times) {
-		//  remove times if not enough positions.
-		removeTimes := g.times[len(g.positions):]
 		g.times = g.times[:len(g.positions)]
-		g.positions = remove(g.positions, removeTimes)
-		g.positions = remove(g.positions, removeTimes)
+	}
+
+	{ // remove positions from winning positions that already owned at start
+		for i, _ := range g.whitewins {
+			g.whitewins[i] = remove(g.whitewins[i], g.whiteinitials)
+		}
+		for i, _ := range g.blackwins {
+			g.blackwins[i] = remove(g.blackwins[i], g.blackinitials)
+		}
 	}
 
 	{ // remove winning positions contains initial from opponent
@@ -2247,6 +2289,27 @@ func parse() (game, error) {
 			}
 			g.whitewins = tmp
 		}
+	}
+
+	{ // Only take those positions that actually occur in winning positions:
+		allPositions := map[string]bool{}
+		for _, row := range g.whitewins {
+			for _, v := range row {
+				allPositions[v] = true
+			}
+		}
+		for _, row := range g.blackwins {
+			for _, v := range row {
+				allPositions[v] = true
+			}
+		}
+		positionsTmp := make([]string, 0, len(allPositions))
+		for _, p := range g.positions {
+			if allPositions[p] {
+				positionsTmp = append(positionsTmp, p)
+			}
+		}
+		g.positions = positionsTmp
 	}
 
 	for i, j := 0, 0; i < len(g.times); i++ {

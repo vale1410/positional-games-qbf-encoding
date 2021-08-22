@@ -17,6 +17,8 @@ The benchmarks can be generated and placed in the folder `qbf` with the command:
 
 ``` ./make_benchmark.sh ```
 
+Need to install https://github.com/vale1410/bule v2.11.0
+
 ## Positional Game Description 1.0
 
 The general encoder reads a game description and produces a QDIMACS file that can be passed to a QBF solver. 

@@ -1,0 +1,69 @@
+%% can be compiled with Bule Version 2.11.0. https://github.com/vale1410/bule
+
+one[1]. 
+zero[0].
+player[black].
+player[white].
+opponent[black,white].
+opponent[white,black].
+edge[A,E,_] :: edgeId[A,E]. 
+vertex[0..vertexLast]. 
+maxBit[0..10].
+
+%vertices going from 0..v-1, such that the bit addressing works properly . 
+vertex[V], maxBit[I], 2**I <= vertexLast :: choose[V,I,(V/(2**I))#mod2]. 
+choose[_,I,_] :: bit[I]. 
+
+t[0]. 
+turnN[1,black,_] :: next[0,1].
+turnN[1,white,_] :: next[0,2].
+next[T,_] :: pos1[T].
+t[T], ~pos1[T] :: final[T]. 
+turnN[T,black,_] :: t[T]. 
+turnN[T,black,_], turnN[T+2,black,_] :: next[T,T+2].
+ 
+turnN[_,_,N] :: range[N,1..N].
+
+%% ===========================================================================
+%% Quantification
+%% ===========================================================================
+
+#exists[T-1], t[T], T>0,                                             :: time(T)? 
+#forall[T], turnN[T,black,_], turnN[T-1,white,N], range[N,S], bit[I] :: moveL(white,S,I,T)? 
+#exists[T], turnN[T,black,N], range[N,S], bit[I]                     :: moveL(black,S,I,T)? 
+#exists[T], turnN[T,black,N], N >= 2, range[N,S], vertex[V]          :: move(black,S,V,T)? 
+#exists[T], vertex[V], t[T], player[A]                               :: board(A,V,T)?
+#exists[Final], final[Final], edgeId[black,E]                        :: win(E)?  
+
+%% ===========================================================================
+
+next[T1,T2], turnN[T2-1,white,N], range[N,S], vertex[V] :: 
+    ~moveL(white,S,I,T2):choose[V,I,1], moveL(white,S,I,T2):choose[V,I,0],
+    ~time(T2), board(black,V,T1), board(white,V,T2). 
+
+next[T1,T2], turnN[T2,black,1], choose[V,I,B] ::
+    ~time(T2), board(black,V,T1), ~board(black,V,T2),
+    moveL(black,1,I,T2):one[B], ~moveL(black,1,I,T2):zero[B].
+
+%% N > 2
+turnN[T2,black,N], N >=2, range[N,S], choose[V,I,B] :: 
+    ~move(black,S,V,T2), moveL(black,S,I,T2):one[B], ~moveL(black,S,I,T2):zero[B].
+turnN[T2,black,N], N >=2, next[T1,T2] :: ~move(black,_S,V,T2), ~board(black,V,T1). 
+turnN[T2,black,N], N >=2              :: ~move(black,_S,V,T2), board(black,V,T2).
+turnN[T2,black,N], N >=2              :: ~move(black,_S,_V,T2), time(T2).
+turnN[T2,black,N], N >=2, next[T1,T2] :: move(black,S,V,T2):range[N,S], board(black,V,T1), ~board(black,V,T2).
+
+%V1 < V2, S1 > S2 ::  ~move(black,S1,V1,T), ~move(black,S2,V2,T).
+
+%% ===========================================================================
+
+~board(_,_,0).
+~board(black,V,T), ~board(white,V,T).
+next[T1,T2] :: ~time(T2), time(T1).
+next[T1,T2] ::          ~board(A,V,T1),  board(A,V,T2).
+next[T1,T2] :: time(T2), board(A,V,T1), ~board(A,V,T2).
+
+win(E) : edgeId[black,E]. 
+final[Final], edge[black,E,V] :: ~win(E), board(black,V,Final).
+final[Final], edgeId[black,E] :: win(E), ~board(black,V,Final):edge[black,E,V].
+final[Final], edgeId[white,E] :: ~board(white,V,Final):edge[white,E,V].
