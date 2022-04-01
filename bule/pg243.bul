@@ -1,0 +1,62 @@
+%% WORK IN PROGRESS
+
+%% * based on enc14
+%% * symmetry breaking 
+%% * no move 
+%% * no occupied
+%% * No counter encoding: Only via LOG
+%% " in Black clauses LOG no time variables 
+
+%% #const finalN. %% finalN depth
+%% #const vertexLast. %% number of vertices
+%% edge[A,E,V] Agent, EdgeId, Vertex
+%% turnN[T,A,N]. TimeId, Agent, Number of moves in that step
+
+%input edge[A,E,V]. Agent A\in{0,1} has winning hyperedge E with vertex V (going from 0 to lastVertex, including )
+:: #ground player[white].
+:: #ground player[black].
+player[P1], player[P2], P1 != P2 :: #ground opponent[P1,P2].
+edge[A,E,_] :: #ground edgeId[A,E].
+edge[_,_,V] :: #ground vertex[V].
+
+#ground t[0]. %Before first term
+turn1[T,_] :: #ground t[T].
+
+%% Symmetry
+firstMove[V]         :: #ground firstMoveTime[V,1].
+vertex[V], t[T], T>1  :: #ground firstMoveTime[V,T].
+
+%vertices going from 0..v-1, such that the bit addressing works properly .
+vertexLast[VV], vertex[V], vertex[I], 2**I <= VV :: #ground choose[V,I,(V/(2**I))#mod2].
+choose[_,I,_] :: #ground bit[I].
+
+t[T], T>0 :: #ground timeG[T].
+timeG[T]                   :: #exists[T-1] time(T).  %1
+turn1[T,white], bit[I]     :: #forall[T] moveL(I,T).
+turn1[T,black], bit[I]     :: #exists[T] moveB(I,T).
+vertex[V], t[T], player[A] :: #exists[T] board(A,V,T).
+final[T], edgeId[black,E]  :: #exists[T] win(E).  %2
+
+%% Symmetry
+turn1[1,A]  :: firstMoveTime[V,1]: board(A,V,1).
+
+timeG[T], timeG[T+1]  :: time(T+1) -> time(T). %3
+player[A], vertex[V] :: ~board(A,V,0). %4
+vertex[V], t[T] :: player[A]: ~board(A,V,T). %5
+player[A], vertex[V], t[T], t[T+1] :: board(A,V,T) -> board(A,V,T+1). %6
+player[A], vertex[V], timeG[T] :: time(T) | board(A,V,T-1) | ~board(A,V,T). %7
+turn1[T,A], opponent[A,B], vertex[V] :: board(B,V,T-1) <- board(B,V,T). %16
+
+turn1[T,white], firstMoveTime[V,T] ::
+    time(T) &
+    choose[V,I,0]:~moveL(I,T) & choose[V,I,1]:moveL(I,T) &
+    ~board(black,V,T-1) ->
+     board(white,V,T). %14
+
+player[A], A==black, turn1[T,A], choose[V,I,0] :: ~board(A,V,T-1) &  moveB(I,T) -> ~board(A,V,T).
+player[A], A==black, turn1[T,A], choose[V,I,1] :: ~board(A,V,T-1) & ~moveB(I,T) -> ~board(A,V,T).
+
+:: edgeId[black,E]:win(E). %17
+final[T], edge[black,E,V] :: win(E) -> board(black,V,T). %18
+final[T], edgeId[black,E] :: win(E) <- edge[black,E,V]:board(black,V,T). %20
+final[T], edgeId[white,E] :: edge[white,E,V]:~board(white,V,T). %19

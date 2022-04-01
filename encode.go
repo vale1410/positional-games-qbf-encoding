@@ -108,22 +108,6 @@ func main() {
 		g.encodeMakerMakerLogarithmic()
 	default: // BULE 6
 		g.generateBuleFacts()
-		//	case 7:
-		//		g.generateBuleFacts()
-		//	case 8:
-		//		g.generateBuleFacts()
-		//	case 9:
-		//		g.generateBuleFacts()
-		//	case 10:
-		//		g.generateBuleFacts()
-		//	case 11:
-		//		g.generateBuleFacts()
-		//	case 12:
-		//		g.generateBuleFacts()
-		//	case 13:
-		//		g.generateBuleFacts()
-		//	default:
-		//		panic("please choose encoding by --enc=<id>")
 	}
 }
 
@@ -1339,6 +1323,12 @@ func createMap(stringSlice []string) map[string]int {
 func (g *game) generateBuleFacts() {
 
 	times := g.times
+	positions := createMap(g.positions)
+
+    bule2Prefix := ""
+    if encFlag >= 200 { 
+        bule2Prefix = ":: #ground"
+    }
 
 	blackturns := createMap(g.blackturns)
 	numbers := g.numbers
@@ -1351,22 +1341,29 @@ func (g *game) generateBuleFacts() {
 		if _, ok := blackturns[id]; ok {
 			player = "black"
 		}
-		fmt.Println("turnN[", i+1, ",", player, ",", numbers[id], "].")
+		fmt.Println(bule2Prefix,"turnN[", i+1, ",", player, ",", numbers[id], "].")
 		for i := 0; i < numbers[id]; i++ {
 			time1++
-			fmt.Println("turn1[", time1, ",", player, "].")
+			fmt.Println(bule2Prefix,"turn1[", time1, ",", player, "].")
 		}
 	}
-	fmt.Println("#const final=", time1, ".")
-	fmt.Println("#const finalN=", timeN, ".")
 
-	positions := createMap(g.positions)
-	fmt.Println("#const vertexLast=", len(g.positions)-1, ".")
+    if encFlag >= 200 { 
+	    fmt.Println(bule2Prefix,"final[", time1, "].")
+	    fmt.Println(bule2Prefix,"finalN[", timeN, "].")
+	    fmt.Println(bule2Prefix,"vertexLast[", len(g.positions)-1, "].")
+    } else {
+	    fmt.Println("#const final=", time1, ".")
+	    fmt.Println("#const finalN=", timeN, ".")
+	    fmt.Println("#const vertexLast=", len(g.positions)-1, ".")
+    }
+
+
 	{
 		player := "black"
 		for i, edge := range g.blackwins {
 			for _, v := range edge {
-				fmt.Println("edge[", player, ",", i, ",", positions[v], "].")
+				fmt.Println(bule2Prefix,"edge[", player, ",", i, ",", positions[v], "].")
 			}
 		}
 	}
@@ -1374,18 +1371,18 @@ func (g *game) generateBuleFacts() {
 		player := "white"
 		for i, edge := range g.whitewins {
 			for _, v := range edge {
-				fmt.Println("edge[", player, ",", i, ",", positions[v], "].")
+				fmt.Println(bule2Prefix,"edge[", player, ",", i, ",", positions[v], "].")
 			}
 		}
 	}
 	if len(g.firstmoves) == 0 {
 		for _, v := range g.positions {
-			fmt.Println("firstMove[", positions[v], "].")
+			fmt.Println(bule2Prefix,"firstMove[", positions[v], "].")
 		}
 	} else {
 		// If no symmetry breaking, then first move can be any
 		for _, v := range g.firstmoves {
-			fmt.Println("firstMove[", positions[v], "].")
+			fmt.Println(bule2Prefix,"firstMove[", positions[v], "].")
 		}
 	}
 }
@@ -2145,7 +2142,7 @@ func parse() (game, error) {
 	var g game
 
 	if len(flag.Args()) == 0 {
-		return g, errors.New("usage: ./encode <filename>")
+		return g, errors.New("usage: ./ground <filename>")
 	}
 	file, err := os.Open(flag.Args()[0])
 	if err != nil {
