@@ -1,0 +1,58 @@
+#blackinitials
+#whiteinitials
+#times
+t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12 t13 t14 t15
+#blackturns
+t1 t3 t5 t7 t9 t11 t13 t15
+#positions
+j12 k12 n9 o9 o10 o19 p1 p2 p3 p4 p5 p19 q1 q2 q3 q4 r1 r2 r3 s1 s2
+#neighbours
+j12 k12 o10 p19 o19 n9
+k12 j12 o10 p19 o19 n9
+n9 k12 j12 o9 p5
+o9 n9 p5 o10
+o10 o9 k12 j12 p19 o19
+o19 k12 j12 o10
+p1 p2
+p2 q2 p1 p3 q1
+p3 q3 p2 p4 q2
+p4 q4 p3 p5 q3
+p5 p4 o9 n9 q4
+p19 k12 j12 o10
+q1 q2 p2
+q2 p2 r2 q1 q3 p3 r1
+q3 p3 r3 q2 q4 p4 r2
+q4 p4 q3 p5 r3
+r1 r2 q2
+r2 q2 s2 r1 r3 q3 s1
+r3 q3 r2 q4 s2
+s1 s2 r2
+s2 r2 s1 r3
+#startboarder
+p1 q1 r1 s1
+#endboarder
+o19 p19
+#distances
+% format [pos] [minimum distance from end border node] [reachable distances from start nodes separated with spaces]
+j12 1 6 7
+k12 1 6 7
+n9 2 5 6 7
+o9 2 5 6 7
+o10 1 6 7
+o19 0 7
+p1 7 0
+p2 6 1 2 3 4 5 6 7
+p3 5 2 3 4 5 6 7
+p4 4 3 4 5 6 7
+p5 3 4 5 6 7
+p19 0 7
+q1 7 0
+q2 6 1 2 3 4 5 6 7
+q3 5 2 3 4 5 6 7
+q4 4 3 4 5 6 7
+r1 7 0
+r2 6 1 2 3 4 5 6 7
+r3 5 2 3 4 5 6 7
+s1 7 0
+s2 6 1 2 3 4 5 6 7
+#unreachablepairs

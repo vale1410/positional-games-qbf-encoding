@@ -1,0 +1,31 @@
+#blackinitials
+#whiteinitials
+#times
+t1 t2 t3 t4 t5 t6 t7 t8 t9
+#blackturns
+t1 t3 t5 t7 t9
+#positions
+a2 a3 a4 a5 b5 c2 c4 c5 d1 d2 d3 d4 d5 e1 e2 e3 e4 e5
+#neighbours
+a2 a3
+a3 a4 c4 b5 a5 c2 a2
+a4 c4 a3 c2 b5 a5
+a5 a4 c4 a3 c2
+b5 a4 c4 a3 c2
+c2 d2 a3 a4 c4 b5 a5 d1
+c4 a4 a3 c2 b5 a5 d4 c5 d3
+c5 c4 d4
+d1 d2 c2
+d2 c2 e2 d1 d3 e1
+d3 e3 d2 d4 c4 e2
+d4 c4 e4 d3 d5 c5 e3
+d5 d4 e4
+e1 e2 d2
+e2 d2 e1 e3 d3
+e3 d3 e2 e4 d4
+e4 d4 e3 e5 d5
+e5 e4
+#startboarder
+a2 d1 e1
+#endboarder
+a5 b5 c5 d5 e5

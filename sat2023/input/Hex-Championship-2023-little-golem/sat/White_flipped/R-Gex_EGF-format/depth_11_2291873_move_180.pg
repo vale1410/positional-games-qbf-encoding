@@ -1,0 +1,126 @@
+#blackinitials
+#whiteinitials
+#times
+t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11
+#blackturns
+t1 t3 t5 t7 t9 t11
+#positions
+a1 a2 a6 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 b1 b2 b3 b4 b5 c1 d1 e13 f13 j2 k1 k14 l13 m11 m12 m13 o19 p16 p19
+#edges
+a1 b1
+a1 a2
+a2 b2
+a2 b3
+a2 b4
+a2 b5
+a2 a6
+a2 b1
+a6 b5
+a6 b4
+a6 b3
+a6 b2
+a6 a7
+a7 a8
+a8 a9
+a9 a10
+a10 a11
+a11 a12
+a12 a13
+a13 a14
+a14 a15
+a15 a16
+a16 a17
+a17 a18
+a17 o19
+a17 a19
+a17 p16
+a17 k14
+a17 f13
+a17 m11
+a18 o19
+a18 a19
+a18 p16
+a18 k14
+a18 f13
+a18 m11
+a19 o19
+a19 f13
+a19 m11
+a19 k14
+a19 p16
+b1 c1
+b1 b2
+b2 b3
+b2 b4
+b2 b5
+b2 c1
+b3 b4
+b3 b5
+b4 b5
+c1 d1
+d1 k1
+d1 j2
+d1 e13
+e13 k1
+e13 j2
+e13 f13
+f13 m11
+f13 o19
+f13 p16
+f13 k14
+j2 k1
+j2 m12
+j2 m13
+j2 p16
+j2 p19
+k1 m12
+k1 m13
+k1 p16
+k1 p19
+k14 o19
+k14 p16
+k14 m11
+k14 l13
+l13 m13
+l13 m12
+m11 o19
+m11 p16
+m11 m12
+m12 m13
+m12 p19
+m12 p16
+m13 p16
+m13 p19
+o19 p16
+o19 p19
+p16 p19
+s a1
+s a10
+s a11
+s a12
+s a13
+s a14
+s a15
+s a16
+s a17
+s a18
+s a19
+s a2
+s a6
+s a7
+s a8
+s a9
+s b2
+s b3
+s b4
+s b5
+t j2
+t k1
+t m12
+t m13
+t p16
+t p19
+#source
+s
+#target
+t

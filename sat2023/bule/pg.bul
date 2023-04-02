@@ -1,0 +1,9 @@
+% input hyperedge[E,V]: black has winning hyperedge E with vertex V
+% input final[F]: the search depth
+
+% Winning Configurations
+hyperedge[E,_] :: #ground hyperedgeId[E].
+final[F], hyperedgeId[E]        :: #exists[F]   win(E).
+:: hyperedgeId[E] : win(E). % (10)
+final[T], hyperedge[E,V] :: ~win(E) | board(black,V,T).  % (11)
+%final[T], hyperedgeId[E] ::  win(E) | hyperedge[E,V] : ~board(black,V,T). % (13)

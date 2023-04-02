@@ -1,0 +1,22 @@
+#blackinitials
+#whiteinitials
+#times
+t1 t2 t3 t4 t5
+#blackturns
+t1 t3 t5
+#positions
+a2 a3 b2 b3 c1
+#edges
+a2 b2
+a2 a3
+a3 b2
+b2 b3
+b2 c1
+S a2
+S c1
+T a3
+T b3
+#source
+S
+#target
+T

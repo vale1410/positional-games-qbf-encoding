@@ -1,0 +1,143 @@
+#blackinitials
+#whiteinitials
+#times
+t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12 t13 t14 t15 t16 t17
+#blackturns
+t1 t3 t5 t7 t9 t11 t13 t15 t17
+#positions
+j19 k19 l18 n16 n17 o15 o16 o17 p14 p15 p16 p17 q13 q14 q15 q16 q17 r12 r13 r14 r15 r16 r17 s11 s12 s13 s14 s15 s16
+#edges
+j19 k19
+j19 l18
+j19 n16
+j19 q13
+j19 s11
+j19 r12
+j19 p14
+j19 o15
+k19 l18
+k19 n17
+k19 o17
+k19 p17
+k19 q17
+k19 r17
+k19 s16
+k19 n16
+k19 q13
+k19 s11
+k19 r12
+k19 p14
+k19 o15
+l18 n16
+l18 q13
+l18 s11
+l18 r12
+l18 p14
+l18 o15
+l18 r17
+l18 s16
+l18 q17
+l18 p17
+l18 o17
+l18 n17
+n16 q13
+n16 s11
+n16 r12
+n16 p14
+n16 o15
+n16 o16
+n16 n17
+n17 o17
+n17 p17
+n17 q17
+n17 r17
+n17 s16
+n17 o16
+o15 q13
+o15 s11
+o15 r12
+o15 p14
+o15 p15
+o15 o16
+o16 p16
+o16 o17
+o16 p15
+o17 p17
+o17 q17
+o17 r17
+o17 s16
+o17 p16
+p14 q13
+p14 s11
+p14 r12
+p14 q14
+p14 p15
+p15 q15
+p15 p16
+p15 q14
+p16 q16
+p16 p17
+p16 q15
+p17 q17
+p17 r17
+p17 s16
+p17 q16
+q13 r12
+q13 s11
+q13 r13
+q13 q14
+q14 r14
+q14 q15
+q14 r13
+q15 r15
+q15 q16
+q15 r14
+q16 r16
+q16 q17
+q16 r15
+q17 r17
+q17 s16
+q17 r16
+r12 s11
+r12 s12
+r12 r13
+r13 s13
+r13 r14
+r13 s12
+r14 s14
+r14 r15
+r14 s13
+r15 s15
+r15 r16
+r15 s14
+r16 s16
+r16 r17
+r16 s15
+r17 s16
+s11 s12
+s12 s13
+s13 s14
+s14 s15
+s15 s16
+s j19
+s k19
+s l18
+s n16
+s o15
+s p14
+s q13
+s r12
+s s11
+t j19
+t k19
+t l18
+t n17
+t o17
+t p17
+t q17
+t r17
+t s16
+#source
+s
+#target
+t

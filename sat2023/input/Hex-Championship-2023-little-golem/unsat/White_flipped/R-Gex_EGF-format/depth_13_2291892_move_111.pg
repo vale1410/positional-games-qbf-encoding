@@ -1,0 +1,77 @@
+#blackinitials
+#whiteinitials
+#times
+t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12 t13
+#blackturns
+t1 t3 t5 t7 t9 t11 t13
+#positions
+a4 b4 h5 i3 j3 j4 q2 q3 r1 r2 r3 s1 s2 s3
+#edges
+a4 b4
+a4 i3
+a4 r1
+a4 q2
+a4 j3
+a4 h5
+a4 j4
+a4 s3
+a4 r3
+a4 q3
+b4 i3
+b4 r1
+b4 q2
+b4 j3
+b4 h5
+b4 j4
+b4 s3
+b4 r3
+b4 q3
+h5 j4
+h5 s3
+h5 r3
+h5 q3
+h5 i3
+h5 j3
+i3 r1
+i3 q2
+i3 j3
+i3 j4
+j3 j4
+j3 q2
+j3 r1
+j4 s3
+j4 r3
+j4 q3
+q2 r1
+q2 r2
+q2 q3
+q3 r3
+q3 s3
+q3 r2
+r1 s1
+r1 r2
+r2 s2
+r2 r3
+r2 s1
+r3 s3
+r3 s2
+s1 s2
+s2 s3
+s a4
+s b4
+s i3
+s j3
+s q2
+s r1
+s s1
+t a4
+t b4
+t h5
+t j4
+t q3
+t r3
+t s3
+#source
+s
+#target
+t

@@ -1,0 +1,56 @@
+% input edge[E,V]: A in black has winning hyperedge E with vertex V
+% input final[F]: the search depth
+
+% Winning Configurations
+final[F] :: #ground pathStep[1..F/2+1].
+source[S], edge[S,V] :: #ground firstRow[V].
+source[S], edge[V,S] :: #ground firstRow[V].
+target[S], edge[S,V] :: #ground lastRow[V].
+target[S], edge[V,S] :: #ground lastRow[V].
+edge[U,V], vertex[U], vertex[V] :: #ground dedge[U,V], dedge[V,U].
+unary[], vertex[V] :: #ground dedge[V,V].
+unary[], final[F], pathStep[T], vertex[V] :: #exists[F]   path(V,T).
+unary[], final[F], pathStep[T], vertex[V] :: path(V,T) -> board(black,V,F).
+unary[], pathStep[T],  pathStep[T+2], vertex[V] :: path(V,T) & path(V,T+1) -> path(V,T+2). % stuttering
+unary[], pathStep[T], ~pathStep[T-1] :: firstRow[V] : path(V,T).                           % start near source
+unary[], pathStep[T],  pathStep[T+1], vertex[V] :: path(V,T) -> dedge[V,W] : path(W,T+1).  % neighbor
+unary[], pathStep[T], ~pathStep[T+1], vertex[V],  ~lastRow[V] :: ~path(V,T).               % end   near target
+unary[], pathStep[T], ~pathStep[T-1], vertex[V], ~firstRow[V] :: ~path(V,T).               % start near source
+unary[], pathStep[T],  pathStep[T+1], vertex[W] :: path(W,T+1) -> dedge[V,W] : path(V,T).  % neighbor
+unary[], pathStep[T], ~pathStep[T+1] ::  lastRow[V] : path(V,T).                           % end   near target
+%#ground unary[].
+
+unaryNoStutt[], final[F], pathStep[T], vertex[V]   :: #exists[F]   path(V,T).
+unaryNoStutt[], final[F], pathStep[T], vertex[V] :: path(V,T) -> board(black,V,F).
+unaryNoStutt[], pathStep[T], ~pathStep[T-1] :: firstRow[V] : path(V,T).                                        % start near source
+unaryNoStutt[], pathStep[T],  pathStep[T+1], vertex[V],  ~lastRow[V] :: path(V,T) -> dedge[V,W] : path(W,T+1). % neighbor
+unaryNoStutt[], pathStep[T], ~pathStep[T+1], vertex[V],  ~lastRow[V] :: ~path(V,T).                            % end   near target
+unaryNoStutt[], pathStep[T], ~pathStep[T-1], vertex[V], ~firstRow[V] :: ~path(V,T).                            % start near source
+unaryNoStutt[], pathStep[T],  pathStep[T+1], vertex[W], ~firstRow[W] :: path(W,T+1) -> dedge[V,W] : path(V,T). % neighbor
+unaryNoStutt[], pathStep[T], ~pathStep[T+1] ::  lastRow[V] : path(V,T).                                        % end   near target
+#ground unaryNoStutt[].
+
+% binaryNoStutt[], final[F], pathStep[T], std_log_position[I] :: #exists[T] path(I,T).
+% binaryNoStutt[], final[F], pathStep[T], vertex[V] :: log_binary[V,I,0] : ~path(I,T) & log_binary[V,I,1] : path(I,T) -> board(black,V,F).
+% binaryNoStutt[], pathStep[T], ~pathStep[T-1] :: firstRow[V] : path(V,T).                                        % start near source
+% binaryNoStutt[], pathStep[T],  pathStep[T+1], vertex[V],  ~lastRow[V] :: log_binary[V,I,0] : ~path(I,T) & log_binary[V,I,1] : path(I,T) -> dedge[V,W] : path(W,T+1). % neighbor
+% binaryNoStutt[], pathStep[T], ~pathStep[T+1], vertex[V],  ~lastRow[V] :: ~path(V,T).                            % end   near target
+% binaryNoStutt[], pathStep[T], ~pathStep[T-1], vertex[V], ~firstRow[V] :: ~path(V,T).                            % start near source
+% binaryNoStutt[], pathStep[T],  pathStep[T+1], vertex[W], ~firstRow[W] :: path(W,T+1) -> dedge[V,W] : path(V,T). % neighbor
+% binaryNoStutt[], pathStep[T], ~pathStep[T+1] ::  lastRow[V] : path(V,T).                                        % end   near target
+
+%#ground binaryNoStutt[].
+
+%played(black,va2,1).
+%played(white,va3,2).
+
+%vertex[V], player[A], turn[2,A]    :: #forall[2]  played(A,V,2).
+%vertex[V], player[A], turn[T,A], T!=2    :: #exists[0]  played(A,V,T).
+%vertex[V], player[A], turn[T,A]    :: #hide      ~played(A,V,T).
+%turn[T,A], vertex[V] :: ~board(A,V,T-1) & board(A,V,T) -> played(A,V,T). % (8)
+%turn[T,A], vertex[V] :: ~board(A,V,T) -> ~played(A,V,T). % (8)
+%turn[T,A], vertex[V] ::  board(A,V,T-1) -> ~played(A,V,T). % (8)
+
+vertex[V], player[A]    :: #hide   ~board(A,V,0).
+%vertex[V], player[A], turn[T,_]    :: #hide   ~board(A,V,T).
+%vertex[V], player[A], turn[T,_]    :: #hide    board(A,V,T).

@@ -1,0 +1,59 @@
+%
+
+%                -             
+%             -     -          
+%          -     X     -       
+%       -     O     -     O    
+%    -     -     -     -     X 
+%       -     O     O     -    
+%          -     -     X       
+%             -     -          
+%                -             
+%
+#blackinitials
+b4
+e3
+e5
+#whiteinitials
+b3
+c2
+d3
+d5
+#times
+t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 
+#blackturns
+t1 t3 t5 t7 t9 t11 
+#positions
+a1 a2 a3 a4 a5 b1 b2 b3 b4 b5 c1 c2 c3 c4 c5 d1 d2 d3 d4 d5 e1 e2 e3 e4 e5 
+#blackwins
+#neighbours
+%format: position followed by its neighbours separated by spaces
+a1 b1 a2
+a2 b2 a1 a3 b1
+a3 b3 a2 a4 b2
+a4 b4 a3 a5 b3
+a5 b5 a4 b4
+b1 a1 c1 b2 a2
+b2 a2 c2 b1 b3 a3 c1
+b3 a3 c3 b2 b4 a4 c2
+b4 a4 c4 b3 b5 a5 c3
+b5 a5 c5 b4 c4
+c1 b1 d1 c2 b2
+c2 b2 d2 c1 c3 b3 d1
+c3 b3 d3 c2 c4 b4 d2
+c4 b4 d4 c3 c5 b5 d3
+c5 b5 d5 c4 d4
+d1 c1 e1 d2 c2
+d2 c2 e2 d1 d3 c3 e1
+d3 c3 e3 d2 d4 c4 e2
+d4 c4 e4 d3 d5 c5 e3
+d5 c5 e5 d4 e4
+e1 d1 e2 d2
+e2 d2 e1 e3 d3
+e3 d3 e2 e4 d4
+e4 d4 e3 e5 d5
+e5 d5 e4
+#startboarder
+a1 b1 c1 d1 e1
+#endboarder
+a5 b5 c5 d5 e5

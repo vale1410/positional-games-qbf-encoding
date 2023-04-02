@@ -1,0 +1,15 @@
+% %%% Winning Configurations
+source[S], edge[S,V] :: #ground firstRow[V].
+source[S], edge[V,S] :: #ground firstRow[V].
+target[S], edge[S,V] :: #ground lastRow[V].
+target[S], edge[V,S] :: #ground lastRow[V].
+edge[U,V], vertex[U], vertex[V] :: #ground dedge[U,V], dedge[V,U].
+
+final[F], vertex[V] :: #exists[F] reach(V).
+
+% Start and end conditions of connectivity of white.
+final[F], firstRow[V] :: board(black,V,F) | reach(V).
+lastRow[V]  :: ~reach(V).
+
+% propagation of reachability through the graph
+final[F], dedge[V,W] :: ~reach(V) | board(black,W,F) | reach(W).

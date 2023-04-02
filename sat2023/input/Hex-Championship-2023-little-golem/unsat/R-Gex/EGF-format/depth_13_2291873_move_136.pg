@@ -1,0 +1,185 @@
+#blackinitials
+#whiteinitials
+#times
+t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12 t13
+#blackturns
+t1 t3 t5 t7 t9 t11 t13
+#positions
+a14 a15 a16 a17 a18 a19 b1 b2 b3 b4 b5 b6 b13 b15 c1 c6 c7 c8 c9 c10 c11 c12 c13 c14 d1 e13 f13
+#edges
+a14 c14
+a14 b13
+a14 b15
+a14 a15
+a14 c13
+a15 b15
+a15 a16
+a15 c14
+a15 b13
+a15 c13
+a16 b15
+a16 a17
+a16 c14
+a16 e13
+a16 f13
+a17 a18
+a17 b15
+a17 c14
+a17 e13
+a17 f13
+a18 a19
+b1 b2
+b2 c1
+b2 b3
+b2 b4
+b2 b5
+b2 c6
+b2 c7
+b2 c8
+b2 c9
+b2 c10
+b2 c11
+b2 c12
+b2 c13
+b2 b6
+b2 d1
+b3 c1
+b3 d1
+b3 b4
+b3 b5
+b3 c6
+b3 c7
+b3 c8
+b3 c9
+b3 c10
+b3 c11
+b3 c12
+b3 c13
+b3 b6
+b4 c1
+b4 d1
+b4 b5
+b4 c6
+b4 c7
+b4 c8
+b4 c9
+b4 c10
+b4 c11
+b4 c12
+b4 c13
+b4 b6
+b5 c6
+b5 c7
+b5 c8
+b5 c9
+b5 c10
+b5 c11
+b5 c12
+b5 c13
+b5 c1
+b5 d1
+b5 b6
+b6 c6
+b6 c7
+b6 c8
+b6 c9
+b6 c10
+b6 c11
+b6 c12
+b6 c13
+b6 c1
+b6 d1
+b13 c13
+b13 c14
+b13 b15
+b13 c12
+b15 c14
+b15 e13
+b15 f13
+b15 c13
+c1 c6
+c1 c7
+c1 c8
+c1 c9
+c1 c10
+c1 c11
+c1 c12
+c1 c13
+c6 d1
+c6 c7
+c6 c8
+c6 c9
+c6 c10
+c6 c11
+c6 c12
+c6 c13
+c7 d1
+c7 c8
+c7 c9
+c7 c10
+c7 c11
+c7 c12
+c7 c13
+c8 d1
+c8 c9
+c8 c10
+c8 c11
+c8 c12
+c8 c13
+c9 d1
+c9 c10
+c9 c11
+c9 c12
+c9 c13
+c10 d1
+c10 c11
+c10 c12
+c10 c13
+c11 d1
+c11 c12
+c11 c13
+c12 d1
+c12 c13
+c13 c14
+c13 d1
+c14 e13
+c14 f13
+e13 f13
+s b1
+s c1
+s d1
+t a19
+#source
+s
+#target
+t
+#distances
+% format [pos] [minimum distance from target] [reachable distances from source separated with spaces]
+a14 5 3 4 5 6 7
+a15 5 3 4 5 6 7
+a16 4 4 5 6 7
+a17 3 4 5 6 7
+a18 2 5 6 7
+a19 1 6 7
+b1 7 1
+b2 6 2 3 4 5 6 7
+b3 6 2 3 4 5 6 7
+b4 6 2 3 4 5 6 7
+b5 6 2 3 4 5 6 7
+b6 6 2 3 4 5 6 7
+b13 5 3 4 5 6 7
+b15 4 3 4 5 6 7
+c1 6 1
+c6 6 2 3 4 5 6 7
+c7 6 2 3 4 5 6 7
+c8 6 2 3 4 5 6 7
+c9 6 2 3 4 5 6 7
+c10 6 2 3 4 5 6 7
+c11 6 2 3 4 5 6 7
+c12 6 2 3 4 5 6 7
+c13 5 2 3 4 5 6 7
+c14 4 3 4 5 6 7
+d1 6 1
+e13 4 4 5 6 7
+f13 4 4 5 6 7
+#unreachablepairs

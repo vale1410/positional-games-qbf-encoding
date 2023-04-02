@@ -1,0 +1,36 @@
+#blackinitials
+#whiteinitials
+#times
+t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11
+#blackturns
+t1 t3 t5 t7 t9 t11
+#positions
+a17 a18 a19 b15 c1 c13 c14 d1
+#edges
+a17 a18
+a17 b15
+a17 c14
+a18 a19
+b15 c14
+b15 c13
+c1 c13
+c13 c14
+c13 d1
+s c1
+s d1
+t a19
+#source
+s
+#target
+t
+#distances
+% format [pos] [minimum distance from target] [reachable distances from source separated with spaces]
+a17 3 4 5 6
+a18 2 5 6
+a19 1 6
+b15 4 3 4 5 6
+c1 6 1
+c13 5 2 4 5 6
+c14 4 3 4 5 6
+d1 6 1
+#unreachablepairs

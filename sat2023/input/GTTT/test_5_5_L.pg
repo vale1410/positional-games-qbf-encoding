@@ -1,0 +1,47 @@
+#blackinitials
+#whiteinitials
+#times
+t1
+#blackturns
+t1
+#positions
+a1 a2 a3 a4 a5 b1 b2 b3 b4 b5 c1 c2 c3 c4 c5 d1 d2 d3 d4 d5 e1 e2 e3 e4 e5
+#neighbours
+%format: [position] [up] [right-side]
+a1 a2 b1
+a2 a3 b2
+a3 a4 b3
+a4 a5 b4
+a5 na b5
+b1 b2 c1
+b2 b3 c2
+b3 b4 c3
+b4 b5 c4
+b5 na c5
+c1 c2 d1
+c2 c3 d2
+c3 c4 d3
+c4 c5 d4
+c5 na d5
+d1 d2 e1
+d2 d3 e2
+d3 d4 e3
+d4 d5 e4
+d5 na e5
+e1 e2 na
+e2 e3 na
+e3 e4 na
+e4 e5 na
+e5 na na
+#blackgoal
+%each line represents a shape with one orientation
+up(p1,p0) side(p1,p2) side(p2,p3) side(p3,p4)
+up(p0,p1) side(p1,p2) side(p2,p3) side(p3,p4)
+up(p4,p0) side(p1,p2) side(p2,p3) side(p3,p4)
+up(p0,p4) side(p1,p2) side(p2,p3) side(p3,p4)
+up(p3,p2) up(p2,p1) up(p1,p0) side(p3,p4)
+up(p3,p2) up(p2,p1) up(p1,p0) side(p4,p3)
+up(p3,p2) up(p2,p1) up(p1,p0) side(p0,p4)
+up(p3,p2) up(p2,p1) up(p1,p0) side(p4,p0)
+#firstmoves
+a1 b1 b2 c1 c2 c3

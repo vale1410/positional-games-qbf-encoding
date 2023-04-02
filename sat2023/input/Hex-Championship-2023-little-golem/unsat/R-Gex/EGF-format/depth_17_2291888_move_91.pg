@@ -1,0 +1,136 @@
+#blackinitials
+#whiteinitials
+#times
+t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12 t13 t14 t15 t16 t17
+#blackturns
+t1 t3 t5 t7 t9 t11 t13 t15 t17
+#positions
+a14 a15 a16 a17 a18 a19 b14 b15 b16 b17 b18 b19 c14 c15 c16 c17 c18 c19 d14 d15 d16 d17 d18 e14 e16 e17 f15 f16 g14 o11 o12 q10 q11 s9 s10
+#edges
+a14 b14
+a15 b15
+a15 b14
+a16 b16
+a16 b15
+a17 b17
+a17 b16
+a18 b18
+a18 b17
+a19 b19
+a19 b18
+b14 c14
+b14 b15
+b15 c15
+b15 b16
+b15 c14
+b16 c16
+b16 b17
+b16 c15
+b17 c17
+b17 b18
+b17 c16
+b18 c18
+b18 b19
+b18 c17
+b19 c19
+b19 c18
+c14 d14
+c14 c15
+c15 d15
+c15 c16
+c15 d14
+c16 d16
+c16 c17
+c16 d15
+c17 d17
+c17 c18
+c17 d16
+c18 d18
+c18 c19
+c18 d17
+c19 d18
+d14 e14
+d14 d15
+d15 d16
+d15 e14
+d16 e16
+d16 d17
+d17 e17
+d17 d18
+d17 e16
+d18 e17
+e14 g14
+e14 f15
+e16 f16
+e16 e17
+e16 f15
+e17 f16
+f15 g14
+f15 f16
+f15 o12
+f15 o11
+f16 g14
+f16 o12
+f16 o11
+g14 o12
+g14 o11
+o11 q11
+o11 o12
+o11 q10
+o12 q11
+o12 q10
+q10 s10
+q10 q11
+q10 s9
+q11 s10
+q11 s9
+s a14
+s a15
+s a16
+s a17
+s a18
+s a19
+t s10
+t s9
+#source
+s
+#target
+t
+#distances
+% format [pos] [minimum distance from target] [reachable distances from source separated with spaces]
+a14 9 1
+a15 9 1
+a16 9 1
+a17 9 1
+a18 9 1
+a19 9 1
+b14 8 2 3 4 5 6 7 8 9
+b15 8 2 3 4 5 6 7 8 9
+b16 8 2 3 4 5 6 7 8 9
+b17 8 2 3 4 5 6 7 8 9
+b18 8 2 3 4 5 6 7 8 9
+b19 8 2 3 4 5 6 7 8 9
+c14 7 3 4 5 6 7 8 9
+c15 7 3 4 5 6 7 8 9
+c16 7 3 4 5 6 7 8 9
+c17 7 3 4 5 6 7 8 9
+c18 7 3 4 5 6 7 8 9
+c19 7 3 4 5 6 7 8 9
+d14 6 4 5 6 7 8 9
+d15 6 4 5 6 7 8 9
+d16 6 4 5 6 7 8 9
+d17 6 4 5 6 7 8 9
+d18 6 4 5 6 7 8 9
+e14 5 5 6 7 8 9
+e16 5 5 6 7 8 9
+e17 5 5 6 7 8 9
+f15 4 6 7 8 9
+f16 4 6 7 8 9
+g14 4 6 7 8 9
+o11 3 7 8 9
+o12 3 7 8 9
+q10 2 8 9
+q11 2 8 9
+s9 1 9
+s10 1 9
+#unreachablepairs

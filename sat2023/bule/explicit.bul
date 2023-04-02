@@ -1,0 +1,41 @@
+%% based on 203
+%% Clause IDs referencing AMAI paper
+%% no symmetrie breaking
+%% difference to 202: has empty board at time point 0
+
+%%% Input:  `std_index_input[X]` a set `ID` containing elements `X`.
+%%% Output: `std_index[X,I]` `X` is the `I`th element in set `ID` (the first element is numbered `0`th).
+%%% Output: `std_index_last[N]` there are `N+1` elements in set `ID`.
+%%% Output: `std_index_range[I]` there is an element numbered `I` in set `ID`.
+
+%%% Input:  `std_log_input[N]` where `N` is an integer to be encoded in binary.
+%%% Output: `std_log_binary[N,I,B]` indicates that in the binary encoding of the number `N` in bit position `I` is B (0 or 1).
+%%% Output: `std_log_position[I]` I has a bit position, I being number of bits needed for the largest integer for ID
+%%% Output: `std_log_highest[H]`    H is the highest bit position from the largest integer in set ID
+
+% input final[F]: the search depth
+
+#ground player[white], player[black].
+
+vertex[V] :: #ground std_index_input[vertices,V].
+std_index_range[vertices,N] :: #ground std_log_input[vertices,N].
+std_index[vertices,V,N], std_log_binary[vertices,N,I,B] :: #ground binary[V,I,B].
+
+final[F] :: #ground timeStep[1..F].
+timeStep[T], T #mod 2 == 0 :: #ground turn[T,white].
+timeStep[T], T #mod 2 == 1 :: #ground turn[T,black].
+
+% Quantification declarations
+turn[T,white], std_log_position[vertices,I] :: #forall[T]   move(I,T).
+turn[T,black], std_log_position[vertices,I] :: #exists[T]   move(I,T).
+vertex[V], player[A], turn[T,black] :: #exists[T]   board(A,V,T).
+
+% Structure of the board
+vertex[V], turn[T,black], T > 1 ::  board(white,V,T)   -> ~board(black,V,T). % (3)
+vertex[V], turn[T,white] ::  board(white,V,T-1) ->  board(white,V,T+1).     % (4)
+%vertex[V], player[A], turn[T,white] ::  board(A,V,T-1)     ->  board(A,V,T+1).     % (4)
+
+turn[T,white], vertex[V] ::
+  binary[V,I,0] : ~move(I,T) & binary[V,I,1] :  move(I,T) &      ~board(black,V,T-1) ->  board(white,V,T+1). % (2,3) White's Choice
+turn[T,black], vertex[V], binary[V,I,_] ::
+  binary[V,I,1] : ~move(I,T) & binary[V,I,0] :  move(I,T) & T>1: ~board(black,V,T-2) -> ~board(black,V,T). % (5,6) Restricting Black

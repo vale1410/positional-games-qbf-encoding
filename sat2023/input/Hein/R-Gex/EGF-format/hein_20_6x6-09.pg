@@ -1,0 +1,53 @@
+#blackinitials
+#whiteinitials
+#times
+t1 t2 t3 t4 t5 t6 t7 t8 t9
+#blackturns
+t1 t3 t5 t7 t9
+#positions
+a4 a5 a6 b3 b4 b5 b6 c1 c3 c6 d1 d5 d6 e1 e2 e3 e5 f1 f2 f3
+#edges
+a4 b4
+a4 a5
+a4 b3
+a5 b5
+a5 a6
+a5 b4
+a6 b5
+b3 c3
+b3 b4
+b3 c1
+b3 d1
+b4 b5
+b4 c3
+b5 b6
+c1 c3
+c3 d1
+c6 d5
+d5 e5
+d5 d6
+d5 e3
+d5 f3
+d6 e5
+e1 e2
+e2 f2
+e2 e3
+e2 f1
+e3 f3
+e3 e5
+e3 f2
+e5 f3
+f1 f2
+f2 f3
+S c1
+S d1
+S e1
+S f1
+T a6
+T b6
+T c6
+T d6
+#source
+S
+#target
+T

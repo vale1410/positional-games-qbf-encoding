@@ -1,0 +1,17 @@
+#blackinitials
+#whiteinitials
+#times
+t1 t2 t3 t4 t5 t6 t7
+#blackturns
+t1 t3 t5 t7
+#positions
+b2 b3 b4 c3 c4 d3 c2
+#blackwins
+b2 b3 b4
+b2 b3 c3 c4
+b2 b3 c3 d3
+b3 b4 c2
+b4 c2 c3
+c2 c3 c4
+c2 c3 d3
+#whitewins

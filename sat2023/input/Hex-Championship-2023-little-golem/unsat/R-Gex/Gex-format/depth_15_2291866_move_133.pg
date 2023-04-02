@@ -1,0 +1,202 @@
+#blackinitials
+#whiteinitials
+#times
+t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12 t13 t14 t15
+#blackturns
+t1 t3 t5 t7 t9 t11 t13 t15
+#positions
+a18 b18 c18 d18 e18 f10 f12 f18 g7 g8 g9 g13 g18 h5 h7 h8 h13 h18 i5 i6 i13 j2 j4 j6 j7 j8 j11 j12 k2 k3 k4 k5 k6 k8 k9 k10 k11 k12 l2 l3 l5 l6 l7 l11 m2 m3 m4 m5 m6 n2 n4 n5 n6 n7 n9 n13 o1 o3 o4 o14 o15 p1 p2 p4 p9 p16 q2 q3 q8 r1 r3 r7 r8 r9 r10 s1 s2 s3 s6 s7 s8 s9 s10
+#neighbours
+a18 b18
+b18 a18 c18
+c18 b18 d18
+d18 c18 e18
+e18 d18 f18
+f10 f12 j12 i13 h13 j11 g13 h8 j8 j7 g9
+f12 j12 i13 h13 j11 g13 f10 h8 j8 j7 g9
+f18 e18 g18
+g7 h7 g8 i6 h5 i5
+g8 h8 g7 g9 h7
+g9 g8 f10 f12 j12 i13 h13 j11 g13 h8 j8 j7
+g13 h13 f12 j12 i13 j11 f10 h8 j8 j7 g9
+g18 f18 h18
+h5 i6 h7 g7
+h7 g7 i6 h5 i5 h8 g8
+h8 g8 j8 f10 g9 f12 j12 i13 h13 j11 g13 j7 h7
+h13 g13 i13 f12 f10 h8 j8 j7 g9 j12 j11
+h18 g18
+i5 i6 h7 g7
+i6 h5 h7 g7 i5 j6
+i13 h13 f12 f10 h8 j8 j7 g9 g13 j12 j11
+j2 k2
+j4 k4 k3
+j6 i6 k6 j7 k5
+j7 j6 j8 h8 f10 g9 f12 j12 i13 h13 j11 g13 k6
+j8 h8 f10 g9 f12 j12 i13 h13 j11 g13 j7 k8
+j11 k11 k10 k9 j12 f12 f10 h8 j8 j7 g9 g13 h13 i13
+j12 f12 f10 h8 j8 j7 g9 g13 h13 i13 j11 k12 k11
+k2 j2 l2 k3
+k3 l3 k2 k4 j4 l2
+k4 j4 m4 l3 l5 k5 m3 k3
+k5 l5 k4 k6 j6 m4 l3 m3
+k6 j6 l6 k5 j7 l5
+k8 j8 l7 k9 k10 l11 p9 r9 q8 r8 o14 p16 o15 n13 n9 k11 n7 m6 n6
+k9 k8 l7 n7 m6 n6 k10 l11 p9 r9 q8 r8 o14 p16 o15 n13 n9 k11 j11
+k10 j11 k9 l11 p9 r9 q8 r8 o14 p16 o15 n13 n9 k8 l7 n7 m6 n6 k11
+k11 j11 l11 k10 k12 j12 p9 r9 q8 r8 o14 p16 o15 n13 n9 k9 k8 l7 n7 m6 n6
+k12 j12 k11 l11
+l2 k2 m2 l3 k3
+l3 k3 m3 l2 k4 m4 l5 k5 m2
+l5 k5 m5 k4 m4 l3 m3 l6 k6
+l6 k6 m6 l5 l7 m5
+l7 n7 m6 k8 k9 k10 l11 p9 r9 q8 r8 o14 p16 o15 n13 n9 k11 n6 l6
+l11 k11 p9 r9 q8 r8 o14 p16 o15 n13 k10 k9 k8 l7 n7 m6 n6 n9 k12
+m2 l2 n2 m3 l3
+m3 l3 o3 n2 n4 m4 p2 o1 p1 m2 k4 l5 k5
+m4 k4 l3 l5 k5 m3 n4 m5 o3 n2 p2 o1 p1
+m5 l5 n5 m4 m6 l6 n4
+m6 l6 n6 m5 l7 n7 k8 k9 k10 l11 p9 r9 q8 r8 o14 p16 o15 n13 n9 k11 n5
+n2 m2 p2 o1 o3 m3 n4 m4 p1
+n4 m4 o4 m3 o3 n2 p2 o1 p1 n5 m5
+n5 m5 n4 n6 m6 o4
+n6 m6 n5 n7 l7 k8 k9 k10 l11 p9 r9 q8 r8 o14 p16 o15 n13 n9 k11
+n7 l7 m6 k8 k9 k10 l11 p9 r9 q8 r8 o14 p16 o15 n13 n9 k11 n6
+n9 k10 k9 k8 l7 n7 m6 n6 l11 k11 p9 r9 q8 r8 o14 p16 o15 n13
+n13 p9 r9 q8 r8 o14 p16 o15 l11 k10 k9 k8 l7 n7 m6 n6 k11 n9
+o1 p1 n2 p2 o3 m3 n4 m4
+o3 m3 n2 n4 m4 p2 o1 p1 o4
+o4 n4 p4 o3 n5
+o14 p16 l11 k10 k9 k8 l7 n7 m6 n6 k11 n9 n13 p9 r9 q8 r8 o15
+o15 o14 p16 l11 k10 k9 k8 l7 n7 m6 n6 k11 n9 n13 p9 r9 q8 r8
+p1 o1 p2 n2 o3 m3 n4 m4
+p2 n2 o1 o3 m3 n4 m4 p1 q2
+p4 o4 q3
+p9 r9 q8 l11 k10 k9 k8 l7 n7 m6 n6 k11 n9 n13 o14 p16 o15 r8
+p16 o14 l11 k10 k9 k8 l7 n7 m6 n6 k11 n9 n13 p9 r9 q8 r8 o15
+q2 p2 s2 r1 r3 q3 s1
+q3 r3 q2 p4 s2 r1 s1
+q8 r8 p9 r9 l11 k10 k9 k8 l7 n7 m6 n6 k11 n9 n13 o14 p16 o15 r7
+r1 s1 q2 s2 r3 q3
+r3 q3 s3 q2 s2 r1 s1
+r7 s7 r8 q8 s6
+r8 q8 s8 r7 r9 p9 l11 k10 k9 k8 l7 n7 m6 n6 k11 n9 n13 o14 p16 o15 s7
+r9 p9 q8 l11 k10 k9 k8 l7 n7 m6 n6 k11 n9 n13 o14 p16 o15 r8 s9 r10 s8
+r10 s10 r9 s9
+s1 r1 q2 r3 q3
+s2 q2 r1 r3 q3
+s3 r3
+s6 r7
+s7 r7 r8
+s8 r8 r9
+s9 r9 r10
+s10 r10
+#startboarder
+a18 h5 i5 j2 j4
+#endboarder
+h18 s1 s10 s2 s3 s6 s7 s8 s9
+#distances
+% format [pos] [minimum distance from end border node] [reachable distances from start nodes separated with spaces]
+a18 7 0
+b18 6 1 3 5 7
+c18 5 2 4 6
+d18 4 3 5 7
+e18 3 4 6
+f10 4 3 4 5 6 7
+f12 4 3 4 5 6 7
+f18 2 5 7
+g7 6 1 2 3 4 5 6 7
+g8 5 2 3 4 5 6 7
+g9 4 3 4 5 6 7
+g13 4 3 4 5 6 7
+g18 1 6
+h5 6 0
+h7 5 1 2 3 4 5 6 7
+h8 4 2 3 4 5 6 7
+h13 4 3 4 5 6 7
+h18 0 7
+i5 6 0
+i6 6 1 2 3 4 5 6 7
+i13 4 3 4 5 6 7
+j2 7 0
+j4 5 0
+j6 5 2 3 4 5 6 7
+j7 4 3 4 5 6 7
+j8 3 3 4 5 6 7
+j11 3 3 4 5 6 7
+j12 3 3 4 5 6 7
+k2 6 1 2 3 4 5 6 7
+k3 5 1 2 3 4 5 6 7
+k4 4 1 2 3 4 5 6 7
+k5 4 2 3 4 5 6 7
+k6 4 3 4 5 6 7
+k8 2 4 5 6 7
+k9 2 4 5 6 7
+k10 2 4 5 6 7
+k11 2 4 5 6 7
+k12 3 4 5 6 7
+l2 5 2 3 4 5 6 7
+l3 4 2 3 4 5 6 7
+l5 4 2 3 4 5 6 7
+l6 3 3 4 5 6 7
+l7 2 4 5 6 7
+l11 2 5 6 7
+m2 4 3 4 5 6 7
+m3 3 2 3 4 5 6 7
+m4 3 2 3 4 5 6 7
+m5 3 3 4 5 6 7
+m6 2 4 5 6 7
+n2 3 3 4 5 6 7
+n4 3 3 4 5 6 7
+n5 3 4 5 6 7
+n6 2 5 6 7
+n7 2 5 6 7
+n9 2 5 6 7
+n13 2 5 6 7
+o1 3 3 4 5 6 7
+o3 3 3 4 5 6 7
+o4 3 4 5 6 7
+o14 2 5 6 7
+o15 2 5 6 7
+p1 3 3 4 5 6 7
+p2 2 3 4 5 6 7
+p4 2 5 6 7
+p9 2 5 6 7
+p16 2 5 6 7
+q2 1 4 5 6 7
+q3 1 5 6 7
+q8 2 5 6 7
+r1 1 5 6 7
+r3 1 5 6 7
+r7 1 6 7
+r8 1 5 6 7
+r9 1 5 6 7
+r10 1 6 7
+s1 0 5 6 7
+s2 0 5 6 7
+s3 0 6 7
+s6 0 7
+s7 0 6 7
+s8 0 6 7
+s9 0 6 7
+s10 0 7
+#unreachablepairs
+j4 h18
+i5 s3
+i5 h18
+h5 s3
+h5 h18
+j2 s3
+j2 s6
+j2 s7
+j2 s8
+j2 s9
+j2 s10
+j2 h18
+a18 s1
+a18 s2
+a18 s3
+a18 s6
+a18 s7
+a18 s8
+a18 s9
+a18 s10
